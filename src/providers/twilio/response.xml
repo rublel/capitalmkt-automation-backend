@@ -1,0 +1,7 @@
+<Response>
+    <Say voice="alice">Bonjour miboune, c'est Proxi Ambulance!.</Say>
+    <Pause length="1" />
+    <Say voice="alice">Je suis là pour vous aider.</Say>
+    <Pause length="1" />
+    <Say voice="alice">Veuillez laisser un message après le bip sonore.</Say>
+</Response>

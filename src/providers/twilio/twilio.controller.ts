@@ -10,8 +10,7 @@ export class TwilioController {
   async initiateCall(): Promise<void> {
     const userPhoneNumber = '+972587091495';
     const twilioPhoneNumber = '+972587091495';
-    const twimlUrl =
-      'https://capitalmkt-automation-backend-09fa7b89d6dd.herokuapp.com/twilio/voice-response.xml';
+    const twimlUrl = 'http://localhost:3000/twilio/voice-response';
 
     await this.twilioService.initiateCall(
       userPhoneNumber,
@@ -20,17 +19,9 @@ export class TwilioController {
     );
   }
 
-  @Get('voice-response.xml')
+  @Get('voice-response')
   async voiceResponse(@Res() res: Response): Promise<void> {
     res.type('text/xml');
-    res.send(`
-            <Response>
-            <Say voice="alice">Bonjour miboune, c'est Proxi Ambulance!.</Say>
-            <Pause length="1"/>
-            <Say voice="alice">Je suis là pour vous aider.</Say>
-            <Pause length="1"/>
-            <Say voice="alice">Veuillez laisser un message après le bip sonore.</Say>
-            </Response>
-        `);
+    res.sendFile('response.xml', { root: './src/providers/twilio' });
   }
 }
