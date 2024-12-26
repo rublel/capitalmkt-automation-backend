@@ -1,4 +1,4 @@
-import { Controller, Post } from '@nestjs/common';
+import { Controller, Get, Post, Res } from '@nestjs/common';
 import { TwilioService } from './twilio.service';
 import { Response } from 'express';
 
@@ -11,7 +11,7 @@ export class TwilioController {
     const userPhoneNumber = '+972587091495';
     const twilioPhoneNumber = '+972587091495';
     const twimlUrl =
-      'https://capitalmkt-automation-backend-09fa7b89d6dd.herokuapp.com/twilio/voice-response';
+      'https://capitalmkt-automation-backend-09fa7b89d6dd.herokuapp.com/twilio/voice-response.xml';
 
     await this.twilioService.initiateCall(
       userPhoneNumber,
@@ -20,12 +20,12 @@ export class TwilioController {
     );
   }
 
-  @Post('voice-response')
-  async voiceResponse(res: Response): Promise<void> {
+  @Get('voice-response.xml')
+  async voiceResponse(@Res() res: Response): Promise<void> {
     res.type('text/xml');
     res.send(`
             <Response>
-            <Say voice="alice">Bonjour, c'est votre assistant vocal.</Say>
+            <Say voice="alice">Bonjour miboune, c'est Proxi Ambulance!.</Say>
             <Pause length="1"/>
             <Say voice="alice">Je suis là pour vous aider.</Say>
             <Pause length="1"/>
