@@ -4,11 +4,11 @@
         10h30. Merci de nous confirmer votre disponibilité.
     </Say>
     <Gather numDigits="1">
-        <Say>
+        <Say voice="Google.fr-FR-Standard-A" language="fr-FR">
             Pour accepter ce transport, appuyez sur la touche 1.
         </Say>
     </Gather>
-    <Say>
+    <Say voice="Google.fr-FR-Standard-A" language="fr-FR">
         Vous n'avez pas répondu. Merci de nous confirmer votre disponibilité.
     </Say>
     <Redirect method="POST">/twilio/confirm-transport</Redirect>

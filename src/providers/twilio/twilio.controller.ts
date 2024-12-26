@@ -8,7 +8,7 @@ export class TwilioController {
 
   @Post('initiate-call')
   async initiateCall(): Promise<void> {
-    const userPhoneNumber = '+972559552634';
+    const userPhoneNumber = '+972543579654';
     const twilioPhoneNumber = '+972587091495';
     const twimlUrl =
       'https://capitalmkt-automation-backend-09fa7b89d6dd.herokuapp.com/twilio/voice-response';
