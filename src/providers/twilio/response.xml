@@ -1,6 +1,15 @@
 <Response>
-    <Say voice="man" language="fr-FR">
+    <Say voice="Google.fr-FR-Standard-A" language="fr-FR">
         Bonjour David, ici Proxi Ambulance, nous avons un nouveau transport pour vous ce matin à
         10h30. Merci de nous confirmer votre disponibilité.
     </Say>
+    <Gather numDigits="1">
+        <Say>
+            Pour accepter ce transport, appuyez sur la touche 1.
+        </Say>
+    </Gather>
+    <Say>
+        Vous n'avez pas répondu. Merci de nous confirmer votre disponibilité.
+    </Say>
+    <Redirect method="POST">/twilio/confirm-transport</Redirect>
 </Response>
