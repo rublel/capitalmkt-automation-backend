@@ -1,5 +1,5 @@
 <Response>
-    <Say voice="man">
+    <Say voice="man" language="fr-FR">
         Bonjour David, ici Proxi Ambulance, nus avons un nouveau transport pour vois ce matin à
         10h30. Merci de nous confirmer votre disponibilité.
     </Say>
