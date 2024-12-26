@@ -11,5 +11,5 @@
     <Say voice="Google.fr-FR-Standard-A" language="fr-FR">
         Vous n'avez pas répondu. Merci de nous confirmer votre disponibilité.
     </Say>
-    <Redirect method="POST">/twilio/confirm-transport</Redirect>
+    <!-- <Redirect method="POST">/twilio/confirm-transport</Redirect> -->
 </Response>
