@@ -10,7 +10,8 @@ export class TwilioController {
   async initiateCall(): Promise<void> {
     const userPhoneNumber = '+972587091495';
     const twilioPhoneNumber = '+972587091495';
-    const twimlUrl = 'http://localhost:3000/twilio/voice-response';
+    const twimlUrl =
+      'https://capitalmkt-automation-backend-09fa7b89d6dd.herokuapp.com/twilio/voice-response';
 
     await this.twilioService.initiateCall(
       userPhoneNumber,
